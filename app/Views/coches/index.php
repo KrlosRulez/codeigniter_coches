@@ -1,27 +1,28 @@
-<h2><?= esc($title) ?></h2>
+<?php if (!empty($coches) && is_array($coches)): ?>
 
-<?php if (! empty($coches) && is_array($coches)): ?>
+<?php foreach ($coches as $coche_item): ?>
 
-    <?php foreach ($coches as $coche_item): ?>
+<h3>
+    <?= esc($coche_item['modelo']) ?>
+</h3> <!-- Campo BBDD -->
 
-        <h3><?= esc($coche_item['modelo']) ?></h3>
+<div class="main">
+    <?= esc($coche_item['precio']) ?>
+    <!-- Campo BBDD -->
+</div>
+<p>
+    <!-- ./coches/ -->
+    <a href="coches/<?= esc($coche_item['id']) ?>">
+        Ver Coche
+    </a>
+</p>
 
-        <div class="main">
-            <?= esc($coche_item['precio']) ?>
-        </div>
-        <p>
-            <!-- ./coches/<? //esc($coche_item['slug']), 'url' ?> -->
-            <a href="#">
-                Ver Coche
-            </a>
-        </p>
-
-    <?php endforeach ?>
+<?php endforeach ?>
 
 <?php else: ?>
 
-    <h3>No hay Coches</h3>
+<h3>No hay Coches</h3>
 
-    <p>No hay coches para mostrar.</p>
+<p>No hay coches para mostrar.</p>
 
 <?php endif ?>

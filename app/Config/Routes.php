@@ -10,6 +10,7 @@ use App\Controllers\Coches;
 $routes->get('/', 'Home::index');
 
 $routes->get('coches', [Coches::class, 'index']);
+// $routes->get('ver/(:segment)', [Coches::class, 'getCoche']);
 $routes->get('coches/(:segment)', [Coches::class, 'show']);
 
 $routes->get('pages', [Pages::class, 'index']); // Mensaje de Bienvenida

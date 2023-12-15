@@ -5,9 +5,11 @@ namespace App\Controllers;
 use App\Models\CochesModel;
 use CodeIgniter\Exceptions\PageNotFoundException;
 
-class Coches extends BaseController {
+class Coches extends BaseController
+{
 
-    public function index() {
+    public function index()
+    {
 
         $model = model(CochesModel::class);
 
@@ -18,29 +20,35 @@ class Coches extends BaseController {
             'title' => 'Lista de Coches',
         ];
 
+        //print_r($data);
+
         return view('templates/header', $data)
-        . view('coches/index')
-        . view('templates/footer');
+            . view('coches/index')
+            . view('templates/footer');
 
     }
 
-    public function show($slug = null) {
+    public function show($id)
+    {
 
         $model = model(CochesModel::class);
 
-        $data['coches'] = $model->getCoches($slug);
+        $data = [
+            'coches' => $model->getCoches($id),
+            'title' => 'Coche Seleccionado',
+        ];
 
         if (empty($data['coches'])) {
 
-            throw new PageNotFoundException('No se encuentra el coche: ' . $slug);
+            throw new PageNotFoundException('No se encuentra el coche: ' . $id);
 
         }
 
-        $data['title'] = $data['coches']['title'];
+        //print_r($data);
 
         return view('templates/header', $data)
-        . view('coches/view')
-        . view('templates/footer');
+            . view('coches/view')
+            . view('templates/footer');
 
     }
 
