@@ -2,18 +2,25 @@
 
 <?php foreach ($coches as $coche_item): ?>
 
-<h3>
+<h2>
     Modelo: <?= esc($coche_item['modelo']) ?>
-</h3> <!-- Campo BBDD -->
+</h2> <!-- Campo BBDD -->
 
 <div class="main">
     <p>Precio: <?= esc($coche_item['precio']) ?></p>
     <!-- Campo BBDD -->
 </div>
 <p>
-    <!-- ./coches/ -->
     <a href="coches/<?= esc($coche_item['id']) ?>">
         Ver Coche
+    </a>
+    &nbsp;    
+    <a href="coches/borrar/<?= esc($coche_item['id']) ?>">
+        Eliminar Coche
+    </a>
+    &nbsp;
+    <a href="coches/actualizar/<?= esc($coche_item['id']) ?>">
+        Actualizar Coche
     </a>
 </p>
 

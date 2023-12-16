@@ -98,4 +98,30 @@ class Coches extends BaseController
 
     }
 
+    public function delete($id) {
+
+        if ($id == null) {
+
+            throw new PageNotFoundException('No se puede eliminar el coche');
+
+        }
+
+        $model = model(CochesModel::class);
+
+        if ($model->getCoches($id)) {
+
+            $model->delete($id);
+
+        } else {
+
+            throw new PageNotFoundException('El coche con id: \"' . $id . '\" no existe en la base de datos');
+
+        }
+
+        return view('templates/header', ['title' => 'Coche Eliminado'])
+        . view('coches/success_delete')
+        . view('templates/footer');
+
+    }
+
 }

@@ -14,6 +14,8 @@ $routes->get('coches', [Coches::class, 'index']);
 $routes->get('coches/nuevo', [Coches::class, 'nuevo']);
 $routes->post('coches/crear', [Coches::class, 'crear']);
 
+$routes->get('coches/borrar/(:segment)', [Coches::class, 'delete']);
+
 $routes->get('coches/(:segment)', [Coches::class, 'show']); // Se llama a show (Coches.php) con el parámetro (:segment) que contendrá la id del coche buscado
 
 $routes->get('pages', [Pages::class, 'index']); // Mensaje de Bienvenida
