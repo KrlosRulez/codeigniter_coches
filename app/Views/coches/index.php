@@ -3,11 +3,10 @@
 <?php foreach ($coches as $coche_item): ?>
 
 <div class="main">
-    <h2>
-        Modelo: <?= esc($coche_item['modelo']) ?>
-    </h2> <!-- Campo BBDD -->
+    <h2>Modelo: <?= esc($coche_item['modelo']) ?></h2>
+    <!-- Campos BBDD -->
     <p>Precio: <?= esc($coche_item['precio']) ?> €</p>
-    <!-- Campo BBDD -->
+    <!-- Campos BBDD -->
     <p>Marca: <?= esc($coche_item['marca']) ?></p>
 </div>
 <p>

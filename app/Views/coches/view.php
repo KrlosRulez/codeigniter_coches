@@ -1,11 +1,10 @@
 <?php if (!empty($coches) && is_array($coches)): ?>
 
     <div class="main">
-        <h2>
-            Modelo: <?= $coches['modelo'] ?>
-        </h2> <!-- Campo BBDD -->
+        <h2>Modelo: <?= $coches['modelo'] ?></h2>
+        <!-- Campos BBDD -->
         <p>Precio: <?= esc($coches['precio']) ?> €</p>
-        <!-- Campo BBDD -->
+        <!-- Campos BBDD -->
         <p>Marca: <?= esc($coches['marca']) ?></p>
         <!-- Campo BBDD de tabla "marcas" -->
     </div>

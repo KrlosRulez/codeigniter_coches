@@ -14,14 +14,10 @@ class Coches extends BaseController
 
         $model = model(CochesModel::class);
 
-        //$data['news'] = $model->getCoches();
-
         $data = [
-            'coches' => $model->getCoches(),
+            'coches' => $model->getCoches(),    // cada posición del array "coches" será un array con los parámetros de cada coche
             'title' => 'Lista de Coches',
         ];
-
-        //print_r($data);
 
         return view('templates/header', $data)
             . view('coches/index')
@@ -35,7 +31,7 @@ class Coches extends BaseController
         $model = model(CochesModel::class);
 
         $data = [
-            'coches' => $model->getCoches($id),
+            'coches' => $model->getCoches($id), // Cada posicición del array "coches" será un parámetro del coche elegido
             'title' => 'Coche Seleccionado',
         ];
 
@@ -44,8 +40,6 @@ class Coches extends BaseController
             throw new PageNotFoundException('No existe un coche con id: ' . $id);
 
         }
-
-        //print_r($data);
 
         return view('templates/header', $data)
             . view('coches/view')
@@ -59,13 +53,11 @@ class Coches extends BaseController
 
         $model = model(MarcasModel::class);
 
-        if ($data['marca'] = $model->findAll())  {
+        $data['marca'] = $model->findAll();
 
-            return view('templates/header', ['title' => 'Crear un nuevo coche'])
-            . view('coches/crear', $data)
-            . view('templates/footer');
-
-        }
+        return view('templates/header', ['title' => 'Crear un nuevo coche'])
+        . view('coches/crear', $data)
+        . view('templates/footer');
 
     }
 
@@ -143,14 +135,14 @@ class Coches extends BaseController
 
         $model = model(CochesModel::class);
 
-        $modelCategory = model(MarcasModel::class);
+        $modelMarca = model(MarcasModel::class);
 
         if ($model->where('id', $id)->find()) {
 
             $data = [
                 'title' => 'Modificar Coche',
                 'coches' => $model->getCoches($id),
-                'marca' => $modelCategory->findAll(),
+                'marca' => $modelMarca->findAll(),
             ];
 
         } else {

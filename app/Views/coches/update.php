@@ -1,4 +1,4 @@
-<a href="../../coches">Volver al listado de coches</a>
+<a href="../">Volver al listado de coches</a>
 
 <h2><?= esc($title) ?></h2>
 
