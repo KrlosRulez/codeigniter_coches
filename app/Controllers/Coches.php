@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\CochesModel;
+use App\Models\MarcasModel;
 use CodeIgniter\Exceptions\PageNotFoundException;
 
 class Coches extends BaseController
@@ -56,9 +57,15 @@ class Coches extends BaseController
 
         helper('form'); // Asistente para funciones de formulario
 
-        return view('templates/header', ['title' => 'Crear un nuevo coche'])
-        . view('coches/crear')
-        . view('templates/footer');
+        $model = model(MarcasModel::class);
+
+        if ($data['marca'] = $model->findAll())  {
+
+            return view('templates/header', ['title' => 'Crear un nuevo coche'])
+            . view('coches/crear', $data)
+            . view('templates/footer');
+
+        }
 
     }
 
@@ -136,11 +143,14 @@ class Coches extends BaseController
 
         $model = model(CochesModel::class);
 
+        $modelCategory = model(MarcasModel::class);
+
         if ($model->where('id', $id)->find()) {
 
             $data = [
                 'title' => 'Modificar Coche',
                 'coches' => $model->getCoches($id),
+                'marca' => $modelCategory->findAll(),
             ];
 
         } else {
