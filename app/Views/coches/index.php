@@ -9,6 +9,7 @@
 <div class="main">
     <p>Precio: <?= esc($coche_item['precio']) ?></p>
     <!-- Campo BBDD -->
+    <p>Marca: <?= esc($coche_item['marca']) ?></p>
 </div>
 <p>
     <a href="coches/<?= esc($coche_item['id']) ?>">

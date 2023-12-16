@@ -1,3 +1,5 @@
+<a href="../coches">Volver al listado de coches</a>
+
 <h2><?= esc($title) ?></h2>
 
 <?= session()->getFlashdata('error') ?>
@@ -16,7 +18,23 @@
     <br />
 
     <label for="id_marca">Marca</label>
-    <input type="number" name="id_marca" value="<?= set_value('id_marca') ?>">
+    
+    <select name="id_marca">
+
+        <?php if (! empty($marca) && is_array($marca)): ?>
+
+            <?php foreach ($marca as $marca_item): ?>
+
+                <option value="<?= $marca_item['id'] ?>">
+                    <?= $marca_item['marca']  ?>
+                </option>
+
+            <?php endforeach ?>
+
+        <?php endif ?>
+
+    </select>
+
     <br />
 
     <input type="submit" name="submit" value="Crear Coche">

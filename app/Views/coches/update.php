@@ -18,7 +18,24 @@
         <br />
 
         <label for="id_marca">Marca</label>
-        <input type="number" name="id_marca" value="<?= esc($coches['id_marca']) ?>">
+
+        <select name="id_marca">
+
+            <?php if (! empty($marca) && is_array($marca)): ?>
+
+                <?php foreach ($marca as $marca_item): ?>
+
+                    <option value="<?= $marca_item['id'] ?>"
+                    <?php if ($marca_item['id'] == esc($coches['id_marca'])): ?> selected <?php endif ?>>
+                        <?= $marca_item['marca'] ?>
+                    </option>
+
+                <?php endforeach ?>
+
+            <?php endif ?>
+
+        </select>
+
         <br />
 
         <input type="submit" name="submit" value="Modificar Coche">
