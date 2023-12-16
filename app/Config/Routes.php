@@ -11,8 +11,11 @@ $routes->get('/', 'Home::index');
 
 $routes->get('coches', [Coches::class, 'index']);
 
-$routes->get('coches/nuevo', [Coches::class, 'nuevo']);
-$routes->post('coches/crear', [Coches::class, 'crear']);
+$routes->get('coches/nuevo', [Coches::class, 'nuevo']); // Formulario Crear
+$routes->post('coches/crear', [Coches::class, 'crear']);    // Ejecutar Query
+
+$routes->get('coches/modificar/(:segment)', [Coches::class, 'modificar']); // Formulario Crear
+$routes->post('coches/modificado/(:segment)', [Coches::class, 'modificado']);    // Ejecutar Query
 
 $routes->get('coches/borrar/(:segment)', [Coches::class, 'delete']);
 

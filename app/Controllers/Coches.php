@@ -124,4 +124,71 @@ class Coches extends BaseController
 
     }
 
+    public function modificar($id) {
+
+        helper('form');
+
+        if ($id == null) {
+
+            throw new PageNotFoundException('No se puede actualizar el coche');
+
+        }
+
+        $model = model(CochesModel::class);
+
+        if ($model->where('id', $id)->find()) {
+
+            $data = [
+                'title' => 'Modificar Coche',
+                'coches' => $model->getCoches($id),
+            ];
+
+        } else {
+
+            throw new PageNotFoundException('El coche con id: \"' . $id . '\" no existe en la base de datos');
+
+        }
+
+        return view('templates/header', $data)
+        . view('coches/update')
+        . view('templates/footer');
+
+    }
+
+    public function modificado($id) {
+
+        helper('form');
+       
+        // Validar los datos introducidos
+ 
+        if (! $this->validate([
+         'modelo' => 'required',
+         'precio' => 'required|max_length[6]',
+         'id_marca' => 'required',
+        ])) {
+ 
+             // Si la validación falla, se devuelve el formulario
+             return $this->modificar($id);
+ 
+        } else {
+ 
+             // Guardar los datos validados
+             $post = $this->validator->getValidated();
+ 
+             $model = model(CochesModel::class);
+ 
+             $model->save([
+                 'modelo' => $post['modelo'],
+                 'precio' => $post['precio'],
+                 'id_marca' => $post['id_marca']
+             ]);
+ 
+             return view('templates/header', ['title' => 'Coche Creado'])
+             . view('coches/success_update')
+             . view('templates/footer');
+ 
+        }
+
+    }
+
 }
