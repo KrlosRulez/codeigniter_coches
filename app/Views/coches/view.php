@@ -1,16 +1,14 @@
 <?php if (!empty($coches) && is_array($coches)): ?>
 
-    <h2>
-        Modelo: <?= $coches['modelo'] ?>
-    </h2> <!-- Campo BBDD -->
-
-    <h3 class="main">
-        Precio: <?= esc($coches['precio']) ?> €
+    <div class="main">
+        <h2>
+            Modelo: <?= $coches['modelo'] ?>
+        </h2> <!-- Campo BBDD -->
+        <p>Precio: <?= esc($coches['precio']) ?> €</p>
         <!-- Campo BBDD -->
-        <br /><br />
-        Marca: <?= esc($coches['marca']) ?>
+        <p>Marca: <?= esc($coches['marca']) ?></p>
         <!-- Campo BBDD de tabla "marcas" -->
-    </h3>
+    </div>
 
     <a href="./">
         Volver al listado de coches

@@ -1,7 +1,6 @@
-<h2><?= esc($title) ?></h2>
-
 <a href="../../coches">Volver al listado de coches</a>
-<br /><br /><br />
+
+<h2><?= esc($title) ?></h2>
 
 <?php if (! empty($coches) && is_array($coches)): ?>
 

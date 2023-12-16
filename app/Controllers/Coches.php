@@ -41,7 +41,7 @@ class Coches extends BaseController
 
         if (empty($data['coches'])) {
 
-            throw new PageNotFoundException('No se existe un coche con id: ' . $id);
+            throw new PageNotFoundException('No existe un coche con id: ' . $id);
 
         }
 
@@ -121,7 +121,7 @@ class Coches extends BaseController
 
         } else {
 
-            throw new PageNotFoundException('El coche con id: \"' . $id . '\" no existe en la base de datos');
+            throw new PageNotFoundException('El coche con id: "' . $id . '" no existe en la base de datos');
 
         }
 
@@ -155,7 +155,7 @@ class Coches extends BaseController
 
         } else {
 
-            throw new PageNotFoundException('El coche con id: \"' . $id . '\" no existe en la base de datos');
+            throw new PageNotFoundException('El coche con id: "' . $id . '" no existe en la base de datos');
 
         }
 
@@ -194,7 +194,7 @@ class Coches extends BaseController
                  'id_marca' => $post['id_marca']
              ]);
  
-             return view('templates/header', ['title' => 'Coche Creado'])
+             return view('templates/header', ['title' => 'Coche Modificado'])
              . view('coches/success_update')
              . view('templates/footer');
  
