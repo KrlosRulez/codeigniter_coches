@@ -47,5 +47,8 @@ INFO - 2023-12-16 12:54:16 --> CSRF token verified.
 INFO - 2023-12-16 13:24:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-12-16 13:28:03 --> CSRF token verified.
 INFO - 2023-12-16 15:19:29 --> CSRF token verified.
+<<<<<<< HEAD
 INFO - 2023-12-16 15:22:20 --> CSRF token verified.
 INFO - 2023-12-16 15:24:23 --> CSRF token verified.
+=======
+>>>>>>> b4a016ae491c48bdfcd331a49d92c5eff83934a7
