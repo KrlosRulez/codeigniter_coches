@@ -3,11 +3,11 @@
 <?php foreach ($coches as $coche_item): ?>
 
 <h3>
-    <?= esc($coche_item['modelo']) ?>
+    Modelo: <?= esc($coche_item['modelo']) ?>
 </h3> <!-- Campo BBDD -->
 
 <div class="main">
-    <?= esc($coche_item['precio']) ?>
+    <p>Precio: <?= esc($coche_item['precio']) ?></p>
     <!-- Campo BBDD -->
 </div>
 <p>
@@ -26,3 +26,5 @@
 <p>No hay coches para mostrar.</p>
 
 <?php endif ?>
+
+<a href="coches/nuevo">Crear Nuevo Coche</a>

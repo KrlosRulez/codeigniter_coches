@@ -42,3 +42,135 @@ FROM `coches`', [], false)
  8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coches))
  9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-15 18:36:27 --> mysqli_sql_exception: Table 'concesionario.marca' doesn't exist in C:\xampp\htdocs\codeigniter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `coches`...', 0)
+#1 C:\xampp\htdocs\codeigniter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `coches`...')
+#2 C:\xampp\htdocs\codeigniter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `coches`...')
+#3 C:\xampp\htdocs\codeigniter\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `coches`...', Array, false)
+#4 C:\xampp\htdocs\codeigniter\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codeigniter\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\codeigniter\app\Models\CochesModel.php(19): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\codeigniter\app\Controllers\Coches.php(19): App\Models\CochesModel->getCoches()
+#8 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(942): App\Controllers\Coches->index()
+#9 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coches))
+#10 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\codeigniter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-12-15 18:36:27 --> Table 'concesionario.marca' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `coches`.*, `marcas`.*
+FROM `coches`
+JOIN `marca` ON `coches`.`id_marca`=`marcas`.`id`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\CochesModel.php(19): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Coches.php(19): App\Models\CochesModel->getCoches()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Coches->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coches))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-15 18:36:30 --> mysqli_sql_exception: Table 'concesionario.marca' doesn't exist in C:\xampp\htdocs\codeigniter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `coches`...', 0)
+#1 C:\xampp\htdocs\codeigniter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `coches`...')
+#2 C:\xampp\htdocs\codeigniter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `coches`...')
+#3 C:\xampp\htdocs\codeigniter\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `coches`...', Array, false)
+#4 C:\xampp\htdocs\codeigniter\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codeigniter\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\codeigniter\app\Models\CochesModel.php(19): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\codeigniter\app\Controllers\Coches.php(19): App\Models\CochesModel->getCoches()
+#8 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(942): App\Controllers\Coches->index()
+#9 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coches))
+#10 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\codeigniter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-12-15 18:36:30 --> Table 'concesionario.marca' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `coches`.*, `marcas`.*
+FROM `coches`
+JOIN `marca` ON `coches`.`id_marca`=`marcas`.`id`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\CochesModel.php(19): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Coches.php(19): App\Models\CochesModel->getCoches()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Coches->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coches))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-15 18:36:59 --> mysqli_sql_exception: Table 'concesionario.marca' doesn't exist in C:\xampp\htdocs\codeigniter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `coches`...', 0)
+#1 C:\xampp\htdocs\codeigniter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `coches`...')
+#2 C:\xampp\htdocs\codeigniter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `coches`...')
+#3 C:\xampp\htdocs\codeigniter\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `coches`...', Array, false)
+#4 C:\xampp\htdocs\codeigniter\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codeigniter\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\codeigniter\app\Models\CochesModel.php(19): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\codeigniter\app\Controllers\Coches.php(19): App\Models\CochesModel->getCoches()
+#8 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(942): App\Controllers\Coches->index()
+#9 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coches))
+#10 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\codeigniter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-12-15 18:36:59 --> Table 'concesionario.marca' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `coches`.*, `marcas`.*
+FROM `coches`
+JOIN `marca` ON `coches`.`id_marca`=`marcas`.`id`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\CochesModel.php(19): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Coches.php(19): App\Models\CochesModel->getCoches()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Coches->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coches))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-15 18:37:04 --> mysqli_sql_exception: Table 'concesionario.marca' doesn't exist in C:\xampp\htdocs\codeigniter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `coches`...', 0)
+#1 C:\xampp\htdocs\codeigniter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `coches`...')
+#2 C:\xampp\htdocs\codeigniter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `coches`...')
+#3 C:\xampp\htdocs\codeigniter\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `coches`...', Array, false)
+#4 C:\xampp\htdocs\codeigniter\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codeigniter\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\codeigniter\app\Models\CochesModel.php(19): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\codeigniter\app\Controllers\Coches.php(19): App\Models\CochesModel->getCoches()
+#8 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(942): App\Controllers\Coches->index()
+#9 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coches))
+#10 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\codeigniter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-12-15 18:37:04 --> Table 'concesionario.marca' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `coches`.*, `marcas`.*
+FROM `coches`
+JOIN `marca` ON `coches`.`id_marca`=`marcas`.`id`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\CochesModel.php(19): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Coches.php(19): App\Models\CochesModel->getCoches()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Coches->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coches))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-15 18:57:46 --> Undefined array key "coches.id"
+in APPPATH\Views\coches\index.php on line 15.
+ 1 APPPATH\Views\coches\index.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "coches.id"', 'C:\\xampp\\htdocs\\codeigniter\\app\\Views\\coches\\index.php', 15)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\codeigniter\\app\\Views\\coches\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('coches/index', [], true)
+ 5 APPPATH\Controllers\Coches.php(26): view('coches/index')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Coches->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Coches))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-15 21:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 21:50:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 21:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 21:55:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 22:08:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 22:09:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 22:09:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 22:09:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 22:09:46 --> CSRF token verified.
