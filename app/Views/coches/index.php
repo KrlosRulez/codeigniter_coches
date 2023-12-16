@@ -19,7 +19,7 @@
         Eliminar Coche
     </a>
     &nbsp;
-    <a href="coches/actualizar/<?= esc($coche_item['id']) ?>">
+    <a href="coches/modificar/<?= esc($coche_item['id']) ?>">
         Actualizar Coche
     </a>
 </p>
